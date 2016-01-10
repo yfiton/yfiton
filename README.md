@@ -16,12 +16,25 @@ Then, to check if Yfiton is properly installed just type `yfiton --version`.
 
 ## Basic usage
 
-TODO
+* Triggering beep(s) using default speaker:
+  - `$> yfiton -n beep`
+  - `$> yfiton -n beep -Ppattern="*** ** *"`
+* Displaying rich desktop notification(s):
+  - `$> yfiton -n desktop -Pmessage="Lunch time!"`
+  - `$> yfiton -n desktop -Pmessage="Lunch time!" -PhideAfter=10 -Pposition=TOP_RIGHT`
 
-Make sure to have a look at the documentation on [project website][website]
-to learn how flexible and powerful Yfiton is, and why you may need it!
+## Advanced usage
 
-  [website]: http://www.yfiton.com
+Yfiton is provided with several _notifiers_ that allow to send notifications using well-known or modern communication services. 
+You can list available _notifiers_ as follows:
+
+    $> yfiton --list-notifiers
+
+A notifier is identified by a unique name. For instance, Facebook notifier has unique identifier `facebook`. It is possible to describe available parameters for Facebook notifier as below:
+
+    $> yfiton --describe-notifier facebook
+
+Most of the notifiers require to connect to a third-party service. Authentication parameters are stored by default in `$HOME/.yfiton`.
 
 ## License
 
