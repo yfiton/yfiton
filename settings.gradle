@@ -1,0 +1,30 @@
+/*
+ * Copyright 2015 Laurent Pellegrino
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+rootProject.name = 'yfiton'
+
+include 'yfiton-api',
+        'yfiton-cli',
+        'yfiton-core',
+        'yfiton-notifiers',
+        'yfiton-notifiers:yfiton-notifier-beep',
+        'yfiton-notifiers:yfiton-notifier-desktop',
+        'yfiton-notifiers:yfiton-notifier-email',
+        'yfiton-notifiers:yfiton-notifier-facebook',
+        'yfiton-notifiers:yfiton-notifier-pushbullet',
+        'yfiton-notifiers:yfiton-notifier-slack',
+        'yfiton-notifiers:yfiton-notifier-twitter',
+        'yfiton-oauth'
