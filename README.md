@@ -29,7 +29,7 @@ Then, to check if Yfiton is properly installed, type `yfiton --version`.
   - `$> yfiton -n pushbullet -Ptitle="Weather alert!" -Pbody="Hurricane approaches"`
   - `$> yfiton -n pushbullet -Pbody="Please find weekly report for 2016/01/07" -Pfile=path/to/your/file.extension`
   - `$> yfiton -n pushbullet -Pbody="New daily deal" -Purl="https://www.groupon.com"`
-* Writing notification with Slack:
+* Writing notification for Slack:
   - `$> yfiton -n slack -Pmessage="Quick design session at 2pm"`
   - `$> yfiton -n slack -Pmessage="1 2 3 soleil!" -Pchannel=#random`
 * Updating Twitter status:
