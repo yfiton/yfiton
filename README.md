@@ -6,7 +6,7 @@ Yfiton is an API and command-line utility to send notifications using well-known
 
 ## Installation
 
-You can download one of the distributions from X.
+You can download one of the distributions from [releases](https://github.com/yfiton/yfiton/releases/latest) section.
 
 Once unpacked, the folder associated to the distribution is refered to as `YFITON_HOME`.
 
