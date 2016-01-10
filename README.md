@@ -8,11 +8,11 @@ Yfiton is an API and command-line utility to send notifications using well-known
 
 You can download one of the distributions from [releases](https://github.com/yfiton/yfiton/releases/latest) section.
 
-Once unpacked, the folder associated to the distribution is refered to as `YFITON_HOME`.
+Once unpacked, the folder associated to the distribution is referred to as `YFITON_HOME`.
 
 For running Yfiton, add `YFITON_HOME/bin` to your `PATH` environment variable.
 
-Then, to check if Yfiton is properly installed just type `yfiton --version`.
+Then, to check if Yfiton is properly installed, type `yfiton --version`.
 
 ## Basic usage
 
@@ -29,9 +29,11 @@ Then, to check if Yfiton is properly installed just type `yfiton --version`.
   - `$> yfiton -n pushbullet -Ptitle="Weather alert!" -Pbody="Hurricane approaches"`
   - `$> yfiton -n pushbullet -Pbody="Please find weekly report for 2016/01/07" -Pfile=path/to/your/file.extension`
   - `$> yfiton -n pushbullet -Pbody="New daily deal" -Purl="https://www.groupon.com"`
+* Writing notification with Slack:
+  - `$> yfiton -n slack -Pmessage="Quick design session at 2pm"`
+  - `$> yfiton -n slack -Pmessage="1 2 3 soleil!" -Pchannel=#random`
 * Updating Twitter status:
   - `$> yfiton -n twitter -Pstatus="5 Tips for Growing Your Business http://bit.ly/1PjsefI #marketing"`
-
 
 ## Advanced usage
 
