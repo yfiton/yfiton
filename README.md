@@ -22,6 +22,16 @@ Then, to check if Yfiton is properly installed just type `yfiton --version`.
 * Displaying rich desktop notification(s):
   - `$> yfiton -n desktop -Pmessage="Lunch time!"`
   - `$> yfiton -n desktop -Pmessage="Lunch time!" -PhideAfter=10 -Pposition=TOP_RIGHT`
+* Sending a message on Facebook:
+  - `$> yfiton -n facebook -Pmessage="I have bougth the new Xbox Elite controller. Incredible!"`
+  - `$> yfiton -n facebook -Pmessage="My new puzzle!" -Pphoto=path/to/your/photo.jpg"`
+* Pushing a notification with Pushbullet:
+  - `$> yfiton -n pushbullet -Ptitle="Weather alert!" -Pbody="Hurricane approaches"`
+  - `$> yfiton -n pushbullet -Pbody="Please find weekly report for 2016/01/07" -Pfile=path/to/your/file.extension`
+  - `$> yfiton -n pushbullet -Pbody="New daily deal" -Purl="https://www.groupon.com"`
+* Updating Twitter status:
+  - `$> yfiton --n twitter -Pstatus="5 Tips for Growing Your Business http://bit.ly/1PjsefI #marketing #cloud"`
+
 
 ## Advanced usage
 
