@@ -33,6 +33,7 @@
 com.yfiton.notifiers.beep.BeepNotifier
 com.yfiton.notifiers.desktop.DesktopNotifier
 com.yfiton.notifiers.email.EmailNotifier
+com.yfiton.notifiers.facebook.FacebookNotifier
 com.yfiton.notifiers.pushbullet.PushbulletNotifier
 com.yfiton.notifiers.twitter.TwitterNotifier
 com.yfiton.notifiers.slack.SlackNotifier
