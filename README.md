@@ -27,7 +27,7 @@ Then, to check if Yfiton is properly installed, type `yfiton --version`.
   - `$> yfiton -n facebook -Pmessage="My new puzzle!" -Pphoto=path/to/your/photo.jpg"`
 * Pushing a notification with Pushbullet:
   - `$> yfiton -n pushbullet -Ptitle="Weather alert!" -Pbody="Hurricane approaches"`
-  - `$> yfiton -n pushbullet -Pbody="Please find weekly report for 2016/01/07" -Pfile=path/to/your/file.extension`
+  - `$> yfiton -n pushbullet -Pbody="Please find report" -Pfile=path/to/file.extension`
   - `$> yfiton -n pushbullet -Pbody="New daily deal" -Purl="https://www.groupon.com"`
 * Writing notification for Slack:
   - `$> yfiton -n slack -Pmessage="Quick design session at 2pm"`
