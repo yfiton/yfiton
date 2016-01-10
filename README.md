@@ -30,7 +30,7 @@ Then, to check if Yfiton is properly installed just type `yfiton --version`.
   - `$> yfiton -n pushbullet -Pbody="Please find weekly report for 2016/01/07" -Pfile=path/to/your/file.extension`
   - `$> yfiton -n pushbullet -Pbody="New daily deal" -Purl="https://www.groupon.com"`
 * Updating Twitter status:
-  - `$> yfiton --n twitter -Pstatus="5 Tips for Growing Your Business http://bit.ly/1PjsefI #marketing #cloud"`
+  - `$> yfiton -n twitter -Pstatus="5 Tips for Growing Your Business http://bit.ly/1PjsefI #marketing"`
 
 
 ## Advanced usage
