@@ -16,27 +16,46 @@ Then, to check if Yfiton is properly installed, type `yfiton --version`.
 
 ## Basic usage
 
-* Triggering beep(s) using default speaker:
-  - `$> yfiton -n beep`
-  - `$> yfiton -n beep -Ppattern="*** ** *"`
-* Displaying rich desktop notification(s):
-  - `$> yfiton -n desktop -Pmessage="Lunch time!"`
-  - `$> yfiton -n desktop -Pmessage="Lunch time!" -PhideAfter=10 -Pposition=TOP_RIGHT`
-* Sending an email:
-  - `$> yfiton -n email -Phost=smtp.free.fr -Pfrom=username@free.fr -Pto=user@company.com -Psubject="Build failure!" -Pbody="Build #42 has failed!" -Pusername=username@free.fr`
-* Publishing a message on [Facebook](https://www.facebook.com):
-  - `$> yfiton -n facebook -Pmessage="I have bougth the new Xbox Elite controller. Incredible!"`
-  - `$> yfiton -n facebook -Pmessage="My new puzzle!" -Pphoto=path/to/your/photo.jpg"`
-* Pushing a notification with [Pushbullet](https://www.pushbullet.com):
-  - `$> yfiton -n pushbullet -Ptitle="Weather alert!" -Pbody="Hurricane approaches"`
-  - `$> yfiton -n pushbullet -Pbody="Please find report" -Pfile=path/to/file.extension`
-  - `$> yfiton -n pushbullet -Pbody="New daily deal" -Purl="https://www.groupon.com"`
-* Writing notification for [Slack](https://slack.com):
-  - `$> yfiton -n slack -Pmessage="Quick design session at 2pm"`
-  - `$> yfiton -n slack -Pmessage="1 2 3 soleil!" -Pchannel=#random`
-* Updating [Twitter](https://twitter.com) status:
-  - `$> yfiton -n twitter -Pstatus="5 Tips for Growing Your Business http://bit.ly/1PjsefI #marketing"`
+Triggering beep(s) using default speaker:
+```
+$> yfiton -n beep
+$> yfiton -n beep -Ppattern="*** ** *"
+```
 
+Displaying rich desktop notification(s):
+```
+$> yfiton -n desktop -Pmessage="Lunch time!"
+$> yfiton -n desktop -Pmessage="Lunch time!" -PhideAfter=10 -Pposition=TOP_RIGHT
+```
+
+Sending an email:
+```
+$> yfiton -n email -Phost=smtp.free.fr -Pfrom=username@free.fr -Pto=user@company.com -Psubject="Build failure!" -Pbody="Build #42 has failed!" -Pusername=username@free.fr
+```
+
+Publishing a message on [Facebook](https://www.facebook.com):
+```
+$> yfiton -n facebook -Pmessage="I have bougth the new Xbox Elite controller. Incredible!"
+$> yfiton -n facebook -Pmessage="My new puzzle!" -Pphoto=path/to/your/photo.jpg
+```
+
+Pushing a notification with [Pushbullet](https://www.pushbullet.com):
+```
+$> yfiton -n pushbullet -Ptitle="Weather alert!" -Pbody="Hurricane approaches"
+$> yfiton -n pushbullet -Pbody="Please find report" -Pfile=path/to/file.extension
+$> yfiton -n pushbullet -Pbody="New daily deal" -Purl="https://www.groupon.com"
+```
+
+Writing notification for [Slack](https://slack.com):
+```
+$> yfiton -n slack -Pmessage="Quick design session at 2pm"
+$> yfiton -n slack -Pmessage="1 2 3 soleil!" -Pchannel=#random
+```
+
+Updating [Twitter](https://twitter.com) status:
+```
+$> yfiton -n twitter -Pstatus="5 Tips for Growing Your Business http://bit.ly/1PjsefI #marketing"
+```
 ## Advanced usage
 
 Yfiton is provided with several _notifiers_ that allow to send notifications using well-known or modern communication services. 
