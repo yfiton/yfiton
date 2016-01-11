@@ -62,11 +62,11 @@ $ yfiton -n twitter -Pstatus="5 Tips for Growing Your Business http://bit.ly/1Pj
 Yfiton is provided with several _notifiers_ that allow to send notifications using well-known or modern communication services. 
 You can list available _notifiers_ as follows:
 
-    $> yfiton --list-notifiers
+    $ yfiton --list-notifiers
 
 A notifier is identified by a unique name. For instance, Facebook notifier has unique identifier `facebook`. It is possible to describe available parameters for Facebook notifier as below:
 
-    $> yfiton --describe-notifier facebook
+    $ yfiton --describe-notifier facebook
 
 Most of the notifiers require to connect to a third-party service. Authentication parameters are stored by default in `$HOME/.yfiton`.
 
