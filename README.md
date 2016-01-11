@@ -22,7 +22,9 @@ Then, to check if Yfiton is properly installed, type `yfiton --version`.
 * Displaying rich desktop notification(s):
   - `$> yfiton -n desktop -Pmessage="Lunch time!"`
   - `$> yfiton -n desktop -Pmessage="Lunch time!" -PhideAfter=10 -Pposition=TOP_RIGHT`
-* Sending a message on [Facebook](https://www.facebook.com):
+* Sending an email:
+  - `$> yfiton -n email -Phost=smtp.free.fr -Pfrom=username@free.fr -Pto=user@company.com -Psubject="Build failure!" -Pbody="Build #42 has failed!" -Pusername=username@free.fr`
+* Publishing a message on [Facebook](https://www.facebook.com):
   - `$> yfiton -n facebook -Pmessage="I have bougth the new Xbox Elite controller. Incredible!"`
   - `$> yfiton -n facebook -Pmessage="My new puzzle!" -Pphoto=path/to/your/photo.jpg"`
 * Pushing a notification with [Pushbullet](https://www.pushbullet.com):
