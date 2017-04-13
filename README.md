@@ -1,6 +1,6 @@
 # Yfiton
 
-[![Build Status](https://travis-ci.org/yfiton/yfiton.svg)](https://travis-ci.org/yfiton/yfiton)
+[![CircleCI](https://circleci.com/gh/yfiton/yfiton.svg?style=shield)](https://circleci.com/gh/yfiton/yfiton)
 
 Yfiton is an API and command-line utility to send notifications using well-known or modern communication services.
 
