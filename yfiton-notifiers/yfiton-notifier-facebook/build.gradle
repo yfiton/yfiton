@@ -15,6 +15,6 @@
  */
 
 dependencies {
-    compile 'com.restfb:restfb:1.18.0'
+    compile 'com.restfb:restfb:1.39.0'
     compile project(':yfiton-oauth')
 }

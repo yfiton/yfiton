@@ -16,6 +16,6 @@
 
 dependencies {
     compile project(':yfiton-api')
-    compile 'org.apache.httpcomponents:fluent-hc:4.5.1'
-    compile 'com.google.code.gson:gson:2.5'
+    compile 'org.apache.httpcomponents:fluent-hc:4.5.3'
+    compile 'com.google.code.gson:gson:2.8.0'
 }

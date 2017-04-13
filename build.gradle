@@ -30,8 +30,8 @@ allprojects {
     defaultTasks 'clean', 'installDist'
 
     dependencies {
-        compile 'ch.qos.logback:logback-classic:1.1.3'
-        compile 'com.google.guava:guava:19.0'
+        compile 'ch.qos.logback:logback-classic:1.2.2'
+        compile 'com.google.guava:guava:21.0'
         compile 'commons-configuration:commons-configuration:1.10'
     }
 
@@ -59,7 +59,7 @@ subprojects {
     apply plugin: 'java'
 
     dependencies {
-        testCompile 'com.google.truth:truth:0.27'
+        testCompile 'com.google.truth:truth:0.32'
         testCompile 'junit:junit:4.12'
     }
 }

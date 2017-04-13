@@ -16,8 +16,8 @@
 
 dependencies {
     compile (
-            'com.beust:jcommander:1.48',
-            'org.apache.commons:commons-lang3:3.4',
+            'com.beust:jcommander:1.64',
+            'org.apache.commons:commons-lang3:3.5',
 
             project(':yfiton-core'),
             project(':yfiton-notifiers:yfiton-notifier-beep'),

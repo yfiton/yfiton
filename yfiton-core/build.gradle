@@ -17,7 +17,7 @@
 project(':yfiton-core') {
     dependencies {
         compile(
-                'org.ocpsoft.prettytime:prettytime:4.0.0.Final',
+                'org.ocpsoft.prettytime:prettytime:4.0.1.Final',
                 'commons-configuration:commons-configuration:1.10',
 
                 project(':yfiton-api')

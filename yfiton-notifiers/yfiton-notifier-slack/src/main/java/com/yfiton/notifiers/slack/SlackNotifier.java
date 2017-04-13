@@ -16,6 +16,10 @@
 
 package com.yfiton.notifiers.slack;
 
+import allbegray.slack.RestUtils;
+import allbegray.slack.SlackClientFactory;
+import allbegray.slack.webapi.SlackWebApiClient;
+import allbegray.slack.webapi.method.chats.ChatPostMessageMethod;
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -25,12 +29,8 @@ import com.yfiton.api.parameter.Parameters;
 import com.yfiton.oauth.AccessTokenData;
 import com.yfiton.oauth.AuthorizationData;
 import com.yfiton.oauth.OAuthNotifier;
-import com.yfiton.oauth.receiver.graphical.YfitonWebEngineListener;
 import com.yfiton.oauth.receiver.PromptReceiver;
-import flowctrl.integration.slack.RestUtils;
-import flowctrl.integration.slack.SlackClientFactory;
-import flowctrl.integration.slack.webapi.SlackWebApiClient;
-import flowctrl.integration.slack.webapi.method.chats.ChatPostMessageMethod;
+import com.yfiton.oauth.receiver.graphical.YfitonWebEngineListener;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.HierarchicalINIConfiguration;
 import org.apache.commons.configuration.SubnodeConfiguration;

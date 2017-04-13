@@ -15,6 +15,6 @@
  */
 
 dependencies {
-    compile 'org.twitter4j:twitter4j-core:4.0.4'
+    compile 'org.twitter4j:twitter4j-core:4.0.6'
     compile project(':yfiton-oauth')
 }

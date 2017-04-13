@@ -15,7 +15,7 @@
  */
 
 dependencies {
-    compile 'com.github.flowctrl:slack-api:v1.0.3.RELEASE'
-    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.github.allbegray:slack-api:v1.3.0.RELEASE'
+    compile 'com.google.code.gson:gson:2.8.0'
     compile project(':yfiton-oauth')
 }
