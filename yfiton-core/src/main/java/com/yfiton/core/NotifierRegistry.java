@@ -18,15 +18,17 @@ package com.yfiton.core;
 
 import com.google.common.collect.ImmutableMap;
 import com.yfiton.api.Notifier;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ServiceLoader;
+import java.util.*;
 
 /**
  * @author lpellegr
  */
 public final class NotifierRegistry {
+
+    private static final Logger log = LoggerFactory.getLogger(NotifierRegistry.class);
 
     private final ServiceLoader<Notifier> notifierLoader;
 
@@ -64,8 +66,15 @@ public final class NotifierRegistry {
     public void reload() {
         notifierLoader.reload();
 
-        notifierLoader.iterator().forEachRemaining(
-                notifier -> register(notifier));
+        Iterator<Notifier> iterator = notifierLoader.iterator();
+
+        while (iterator.hasNext()) {
+            try {
+                register(iterator.next());
+            } catch (ServiceConfigurationError e) {
+                log.warn(e.getMessage() + ". Missing JavaFX dependency?");
+            }
+        }
     }
 
     public static NotifierRegistry getInstance() {
