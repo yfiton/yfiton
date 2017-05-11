@@ -63,7 +63,7 @@ public class PushbulletNotifier extends OAuthNotifier {
     private String file;
 
     public PushbulletNotifier() {
-        super(CLIENT_ID, null, PromptReceiver.class, YfitonWebEngineListener.class);
+        super(CLIENT_ID, null);
     }
 
     @Override

@@ -60,7 +60,7 @@ public class FacebookNotifier extends OAuthNotifier {
     private Path movie;
 
     public FacebookNotifier() {
-        super(CLIENT_ID, CLIENT_SECRET, PromptReceiver.class, YfitonWebEngineListener.class);
+        super(CLIENT_ID, CLIENT_SECRET);
     }
 
     @Override

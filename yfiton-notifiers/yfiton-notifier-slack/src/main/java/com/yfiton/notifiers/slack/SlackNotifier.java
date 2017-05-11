@@ -62,8 +62,7 @@ public class SlackNotifier extends OAuthNotifier {
     private String teamId;
 
     public SlackNotifier() {
-        super("13619498982.13619874391", "8c1846b68f3ca8cd67926c2d85f0f879",
-                PromptReceiver.class, YfitonWebEngineListener.class);
+        super("13619498982.13619874391", "8c1846b68f3ca8cd67926c2d85f0f879");
 
         if (!log.isDebugEnabled() && !log.isTraceEnabled()) {
             Logger.getLogger(RestUtils.class.getName()).setLevel(Level.OFF);
@@ -102,8 +101,11 @@ public class SlackNotifier extends OAuthNotifier {
     @Override
     protected AccessTokenData requestAccessTokenData(AuthorizationData authorizationData) throws NotificationException {
         try {
-            String response = Request.Get(
-                    getAccessTokenUrl(authorizationData.getAuthorizationCode()).get()).execute().returnContent().asString();
+            String accessTokenUrl = getAccessTokenUrl(authorizationData.getAuthorizationCode()).get();
+
+            log.trace("Access token URL is {}", accessTokenUrl);
+
+            String response = Request.Get(accessTokenUrl).execute().returnContent().asString();
 
             JsonParser jsonParser = new JsonParser();
             JsonObject json = jsonParser.parse(response).getAsJsonObject();

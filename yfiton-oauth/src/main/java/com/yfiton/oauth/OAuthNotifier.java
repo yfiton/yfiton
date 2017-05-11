@@ -64,19 +64,35 @@ public abstract class OAuthNotifier extends Notifier {
 
     protected final Class<? extends PromptReceiver> promptReceiverClazz;
 
-    protected final Class<? extends WebEngineListener> webEngineListenerClazz;
+    protected final String webEngineListenerClazz;
 
     /**
      * Creates a new notifier instance supporting OAuth authentication.
      *
      * @param clientId               third-party service client identifier.
      * @param clientSecret           third-party service client secret.
-     * @param promptReceiverClazz    the class associated to the receiver used to get authorization data on headless environments
-     * @param webEngineListenerClazz
+     */
+    public OAuthNotifier(String clientId, String clientSecret) {
+        super();
+
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+
+        this.promptReceiverClazz = PromptReceiver.class;
+        this.webEngineListenerClazz = "com.yfiton.oauth.receiver.graphical.YfitonWebEngineListener";
+    }
+
+    /**
+     * Creates a new notifier instance supporting OAuth authentication.
+     *
+     * @param clientId               third-party service client identifier.
+     * @param clientSecret           third-party service client secret.
+     * @param promptReceiverClazz    the class associated to the receiver used to get authorization data on headless environments.
+     * @param webEngineListenerClazz the class listening for the Java FX web engine events.
      */
     public OAuthNotifier(String clientId, String clientSecret,
                          Class<? extends PromptReceiver> promptReceiverClazz,
-                         Class<? extends WebEngineListener> webEngineListenerClazz) {
+                         String webEngineListenerClazz) {
         super();
 
         this.clientId = clientId;
@@ -176,6 +192,8 @@ public abstract class OAuthNotifier extends Notifier {
 
         checkState(stateParameterValue, authorizationData);
 
+        log.trace("Authorization data obtained with success");
+
         return authorizationData;
     }
 
@@ -226,13 +244,16 @@ public abstract class OAuthNotifier extends Notifier {
     }
 
     protected AuthorizationData getAuthorizationDataUsingScreen(String authorizationUrl, String authorizationCodeParameterName) throws NotificationException {
-        GraphicalReceiver graphicalReceiver =
-                new GraphicalReceiver(
-                        webEngineListenerClazz,
-                        log.isDebugEnabled() || log.isTraceEnabled());
+        try {
+            GraphicalReceiver graphicalReceiver = new GraphicalReceiver(
+                    (Class<? extends WebEngineListener>) Class.forName(webEngineListenerClazz),
+                    log.isDebugEnabled() || log.isTraceEnabled());
 
-        return graphicalReceiver.requestAuthorizationData(
-                authorizationUrl, authorizationCodeParameterName);
+            return graphicalReceiver.requestAuthorizationData(
+                    authorizationUrl, authorizationCodeParameterName);
+        } catch (ClassCastException | ClassNotFoundException e) {
+            throw new NotificationException(e);
+        }
     }
 
     public String getClientId() {

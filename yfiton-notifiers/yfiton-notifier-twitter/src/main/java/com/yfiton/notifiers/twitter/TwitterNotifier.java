@@ -60,7 +60,7 @@ public class TwitterNotifier extends OAuthNotifier {
     public TwitterNotifier() throws NotificationException {
         super(CLIENT_ID, SECRET_ID,
                 PromptReceiver.class,
-                TwitterWebEngineListener.class);
+                "com.yfiton.notifiers.twitter.TwitterWebEngineListener.class");
 
         ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
         configurationBuilder
