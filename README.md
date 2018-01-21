@@ -59,7 +59,7 @@ $ yfiton -n twitter -Pstatus="5 Tips for Growing Your Business http://bit.ly/1Pj
 ```
 ## Advanced usage
 
-Yfiton is provided with several _notifiers_ that allow to send notifications using well-known or modern communication services. 
+Yfiton is provided with several _notifiers_ that allow sending notifications using well-known or modern communication services. 
 You can list available _notifiers_ as follows:
 
     $ yfiton --list-notifiers
