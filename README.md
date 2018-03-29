@@ -47,7 +47,7 @@ $ yfiton -n pushbullet -Pbody="Please find report" -Pfile=path/to/file.extension
 $ yfiton -n pushbullet -Pbody="New daily deal" -Purl="https://www.groupon.com"
 ```
 
-Writing notification for [Slack](https://slack.com):
+Sending notification to [Slack](https://slack.com):
 ```
 $ yfiton -n slack -Pmessage="Quick design session at 2pm"
 $ yfiton -n slack -Pmessage="1 2 3 soleil!" -Pchannel=#random
