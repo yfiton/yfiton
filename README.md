@@ -73,3 +73,7 @@ Most of the notifiers require to connect to a third-party service. Authenticatio
 ## License
 
 Yfiton is released under Apache Software Foundation License v2.0. See LICENSE file included for more details.
+
+# Acknowledgements
+
+[![](https://user-images.githubusercontent.com/128898/42722048-9087dd44-8745-11e8-88e3-4c06833b7454.png)](https://browserstack.com)
