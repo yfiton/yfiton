@@ -109,7 +109,7 @@ public abstract class OAuthNotifier extends Notifier {
      *                            if supported by the third-party service. This one
      *                            is used for security purposes in order to prevent
      *                            Cross Site Request Forgery (XRSF).
-     * @return
+     * @return the URL to use for retrieving an authorization code.
      */
     protected abstract String getAuthorizationUrl(String stateParameterValue) throws NotificationException;
 
