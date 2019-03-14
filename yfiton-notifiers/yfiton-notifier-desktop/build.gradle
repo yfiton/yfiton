@@ -14,6 +14,14 @@
  * limitations under the License.
  */
 
+plugins {
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.web' ]
+}
+
 dependencies {
     compile 'org.controlsfx:controlsfx:8.40.12'
 }
