@@ -84,7 +84,7 @@ public class EmailNotifierTest {
     }
 
     private void sendEmail(String smtpFqdn, String email, String username, String password, String subject) throws ConfigurationException, ParameterException {
-        ImmutableMap.Builder<String, String> builder = new ImmutableMap.Builder();
+        ImmutableMap.Builder<String, String> builder = new ImmutableMap.Builder<>();
         builder.put("host", smtpFqdn);
         builder.put("username", username);
         builder.put("password", password);
