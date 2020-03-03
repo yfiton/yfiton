@@ -1,6 +1,6 @@
 # Yfiton
 
-[![CircleCI](https://circleci.com/gh/yfiton/yfiton.svg?style=shield)](https://circleci.com/gh/yfiton/yfiton) [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=d083Q0V1akVRZWw5UncrOUp3eDhuUTZteGxRcXIrRzAzUk9xS1hWSC9Vaz0tLTlRYzFKNkxKdkcrUWdSRENmV1NuOEE9PQ==--6a2a3a83f1f6eeafd0b8a1fd96401cec789e6cb1)](https://www.browserstack.com/automate/public-build/d083Q0V1akVRZWw5UncrOUp3eDhuUTZteGxRcXIrRzAzUk9xS1hWSC9Vaz0tLTlRYzFKNkxKdkcrUWdSRENmV1NuOEE9PQ==--6a2a3a83f1f6eeafd0b8a1fd96401cec789e6cb1)
+[![CircleCI](https://circleci.com/gh/yfiton/yfiton.svg?style=shield)](https://circleci.com/gh/yfiton/yfiton)
 
 Yfiton is an API and command-line utility to send notifications using well-known or modern communication services.
 
