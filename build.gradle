@@ -24,8 +24,8 @@ allprojects {
 
     group = 'com.yfiton'
 
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = 13
+    targetCompatibility = 13
 
     defaultTasks 'clean', 'installDist'
 
