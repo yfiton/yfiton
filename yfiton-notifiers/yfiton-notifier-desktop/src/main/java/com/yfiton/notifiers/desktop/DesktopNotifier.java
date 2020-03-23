@@ -59,7 +59,7 @@ public class DesktopNotifier extends Notifier {
     protected void notify(Parameters parameters) throws NotificationException {
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command(
-                "java", "-classpath", getClasspath(), DesktopNotification.class.getName(),
+                "java", "-classpath", System.getProperty("java.class.path"), DesktopNotification.class.getName(),
                 "--hideAfter=" + hideAfter, "--message=" + message,
                 "--position=" + position.toUpperCase(), "--type=" + type);
 
@@ -73,17 +73,6 @@ public class DesktopNotifier extends Notifier {
         } catch (IOException | InterruptedException e) {
             throw new NotificationException(e.getMessage());
         }
-    }
-
-    private String getClasspath() {
-        StringBuilder result = new StringBuilder();
-
-        for (URL url : ((URLClassLoader) Thread.currentThread().getContextClassLoader()).getURLs()) {
-            result.append(new File(url.getPath()));
-            result.append(System.getProperty("path.separator"));
-        }
-
-        return result.toString();
     }
 
     @Override
