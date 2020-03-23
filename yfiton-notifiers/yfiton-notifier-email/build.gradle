@@ -19,5 +19,5 @@ dependencies {
     compile project(':yfiton-api')
 
     testCompile project(":yfiton-core")
-    testCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.13'
 }

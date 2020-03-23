@@ -53,7 +53,7 @@ public abstract class ConverterTest<T> {
     public void testGetInstance() throws InvocationTargetException, IllegalAccessException {
         try {
             Method method = converterClass.getMethod("getInstance");
-            Truth.assertThat(method.invoke(null)).isSameAs(method.invoke(null));
+            Truth.assertThat(method.invoke(null)).isSameInstanceAs(method.invoke(null));
         } catch (NoSuchMethodException e) {
             // ignore test if method does not exist
         }

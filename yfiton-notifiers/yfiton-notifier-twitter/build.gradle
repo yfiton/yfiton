@@ -15,7 +15,7 @@
  */
 
 plugins {
-    id 'org.openjfx.javafxplugin' version '0.0.7'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
 }
 
 javafx {
@@ -23,6 +23,6 @@ javafx {
 }
 
 dependencies {
-    compile 'org.twitter4j:twitter4j-core:4.0.6'
+    compile 'org.twitter4j:twitter4j-core:4.0.7'
     compile project(':yfiton-oauth')
 }

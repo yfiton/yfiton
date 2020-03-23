@@ -15,7 +15,7 @@
  */
 
 plugins {
-    id 'org.openjfx.javafxplugin' version '0.0.7'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
 }
 
 javafx {
@@ -23,5 +23,5 @@ javafx {
 }
 
 dependencies {
-    compile 'org.controlsfx:controlsfx:8.40.12'
+    compile 'org.controlsfx:controlsfx:11.0.1'
 }
