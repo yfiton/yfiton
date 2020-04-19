@@ -26,10 +26,7 @@ import com.yfiton.notifiers.desktop.validators.PosValidator;
 import com.yfiton.notifiers.desktop.validators.TypeValidator;
 import javafx.geometry.Pos;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.util.Optional;
 
 
@@ -39,16 +36,16 @@ import java.util.Optional;
 public class DesktopNotifier extends Notifier {
 
     @Parameter(description = "The duration that the notification should show, after which it will be hidden", validator = ParseAsIntegerValidator.class)
-    private String hideAfter = "5";
+    private final String hideAfter = "5";
 
     @Parameter(description = "The text to show in the notification", converter = LineBreakConverter.class, required = true)
     private String message;
 
     @Parameter(description = "The position of the notification on screen", validator = PosValidator.class)
-    private String position = Pos.TOP_CENTER.name();
+    private final String position = Pos.TOP_CENTER.name();
 
     @Parameter(description = "Notification type: [info, error, success, warning]", validator = TypeValidator.class)
-    private String type = "info";
+    private final String type = "info";
 
     @Override
     protected Check checkParameters(Parameters parameters) {
@@ -66,9 +63,9 @@ public class DesktopNotifier extends Notifier {
         try {
             Process process = processBuilder.start();
             int returnCode = process.waitFor();
-
             if (returnCode != 0) {
-                throw new NotificationException("Error occurred while waiting for process: return code " + parameters);
+                throw new NotificationException("Error occurred while waiting for process: "
+                        + new String(process.getErrorStream().readAllBytes()));
             }
         } catch (IOException | InterruptedException e) {
             throw new NotificationException(e.getMessage());
