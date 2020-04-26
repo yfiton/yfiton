@@ -1,6 +1,0 @@
-sudo: required
-dist: trusty
-language: java
-jdk:
-    - oraclejdk11
-
